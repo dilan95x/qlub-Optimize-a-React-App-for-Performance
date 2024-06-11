@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useState } from "react";
 import { SearchComponent } from "../types/SearchComponent.types";
 import { Stack, Switch } from "@mui/material";
 
@@ -17,10 +17,6 @@ const SearchBox: React.FC<SearchComponent> = ({
   const handleSearch = () => {
     onSearch(searchQuery);
   };
-
-  useEffect(() => {
-    console.log(isHDOn);
-  }, [isHDOn]);
 
   return (
     <div className="search-box sticky">
